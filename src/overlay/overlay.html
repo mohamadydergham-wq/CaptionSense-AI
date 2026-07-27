@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaptionSense AI Overlay</title>
+  <link rel="stylesheet" href="styles/overlay.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/glassmorphism.css">
+</head>
+<body>
+  <div id="overlay-root" class="overlay-container">
+    <div class="caption-widget" id="caption-widget">
+      <div class="widget-header">
+        <div class="widget-title">Live Captions</div>
+        <div class="widget-controls">
+          <button id="toggle-pin" class="control-btn" title="Pin">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h3.79v2h-5v-1.35L13.04 8h-3.79V6h5v1.29z"/>
+            </svg>
+          </button>
+          <button id="toggle-minimize" class="control-btn" title="Minimize">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <button id="close-widget" class="control-btn" title="Close">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="widget-content">
+        <div id="captions-display" class="captions-display">
+          <p class="waiting-message">Waiting for audio...</p>
+        </div>
+      </div>
+
+      <div class="widget-footer">
+        <div class="tone-badge" id="tone-badge">--</div>
+        <div class="sentiment-indicator" id="sentiment-indicator">--</div>
+        <div class="speaker-label" id="speaker-label">Unknown Speaker</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="overlay.js"></script>
+</body>
+</html>
