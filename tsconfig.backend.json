@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist/backend"
+  },
+  "include": ["src/backend/**/*.ts"],
+  "exclude": ["node_modules", "src/popup/**", "src/background/**", "src/content/**", "src/overlay/**"]
+}

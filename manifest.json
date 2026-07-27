@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "CaptionSense AI",
+  "version": "1.0.0",
+  "description": "Live captions with tone detection and sentiment analysis for video calls",
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "scripting",
+    "storage",
+    "webRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "CaptionSense AI"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content-script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "overlay/overlay.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "author": "CaptionSense Team",
+  "homepage_url": "https://captionsense.ai"
+}
